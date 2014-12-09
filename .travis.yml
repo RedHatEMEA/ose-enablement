@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 0.10
+before_script:
+  - npm install -g grunt-cli
+deploy:
+  provider: openshift
+  user: jhoffmann@redhat.com
+  password:
+    secure: IPsqZuEzpLVFCz319M6RPVZlYEQdAapGHnVoqiaWBy3d0vR/yQ85XuDZETgrRDwGF9Qbn53b05sDNBnIzHdc+2bcGh99L7BbSfpC2J3WSBOhBLD9M4cA4D4BUcvabt8RoIEGcsJIG+aZzNRIW/onVxiZK54Ns0Q5leIVlfpUrAg=
+  app: ose
+  domain: rhmasters
+  on:
+    repo: juhoffma/ose-enablement
