@@ -53,10 +53,22 @@
 				<section data-markdown="markdown/agenda.md"
 					data-separator="^---"
 					data-vertical="^--"
-					data-notes="^Note:">
+					data-notes="^Notes:">
 				</section>
 
-				<section>
+				<section data-markdown="markdown/docker.md"
+					data-separator="^---"
+					data-vertical="^--"
+					data-notes="^Notes:">
+				</section>
+
+				<section data-markdown="markdown/kubernetes.md"
+					data-separator="^---"
+					data-vertical="^--"
+					data-notes="^Notes:">
+				</section>
+
+			<section>
 					<h2>Heads Up</h2>
 					<p>
 						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
@@ -376,7 +388,8 @@ function linkify( selector ) {
 				history: true,
 				center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				//theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				theme: 'solarized', // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
