@@ -1,4 +1,7 @@
 # Kubernetes
+### Manage a cluster of Linux containers as a single system to accelerate Dev and simplify Ops.
+
+![Kubernetes Logo](../images/kubernetes/logo.png)
 
 --
 
@@ -7,11 +10,11 @@ Kubernetes is a system for managing containerized applications across multiple h
 --
 
 ## Is Kubernetes, then, a Docker "orchestration" system?
-#### Yes and no.
+### Yes and no.
 
 --
 
-# Imperative vs. Declarative
+#  Declarative vs. Imperative
 
 Notes:
 Kubernetes establishes robust declarative primitives for maintaining the desired state requested by the user. We see these primitives as the main value added by Kubernetes. Self-healing mechanisms, such as auto-restarting, re-scheduling, and replicating containers require active controllers, not just imperative orchestration.

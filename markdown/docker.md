@@ -4,7 +4,7 @@
 
 ---
 
-# Docker
+<!-- .slide: data-background="../images/docker/docker-wallpaper-grey.jpg" -->
 
 --
 
