@@ -23,7 +23,7 @@ Kubernetes enables users to ask a cluster to run a set of containers. The system
 
 --
 
-Kubernetes Cluster
+# Kubernetes Cluster
 
 Notes:
 A single Kubernetes cluster is not intended to span multiple availability zones. Instead, we recommend building a higher-level layer to replicate complete deployments of highly available applications across multiple zones.
@@ -38,7 +38,7 @@ A single Kubernetes cluster is not intended to span multiple availability zones.
 
 --
 
-![Kubernetes Architecture](../images/kubernetes/architecture.png) <!-- .element: class="stretch" -->
+<!-- .slide: data-background="../images/kubernetes/architecture.png" -->
 
 Notes:
 A running Kubernetes cluster contains node agents (kubelet) and master components (APIs, scheduler, etc), on top of a distributed storage solution.
@@ -49,7 +49,7 @@ A running Kubernetes cluster contains node agents (kubelet) and master component
 
 --
 
-![Kubernetes Architecture](../images/kubernetes/architecture_pods.png) <!-- .element: class="stretch" -->
+<!-- .slide: data-background="../images/kubernetes/architecture_pods.png" -->
 
 Notes:
 A pod (as in a pod of whales or pea pod) is a relatively tightly coupled group of containers that are scheduled onto the same host. It models an application-specific "virtual host" in a containerized environment. Pods serve as units of scheduling, deployment, and horizontal scaling/replication, share fate, and share some resources, such as storage volumes and IP addresses.
