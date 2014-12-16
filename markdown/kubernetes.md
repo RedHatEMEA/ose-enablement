@@ -38,7 +38,7 @@ A single Kubernetes cluster is not intended to span multiple availability zones.
 
 --
 
-<!-- .slide: data-background="../images/kubernetes/architecture.png" -->
+![Architecture](../images/kubernetes/architecture.png)  <!-- .element: class="stretch" -->
 
 Notes:
 A running Kubernetes cluster contains node agents (kubelet) and master components (APIs, scheduler, etc), on top of a distributed storage solution.
@@ -49,7 +49,7 @@ A running Kubernetes cluster contains node agents (kubelet) and master component
 
 --
 
-<!-- .slide: data-background="../images/kubernetes/architecture_pods.png" -->
+![Pods](../images/kubernetes/architecture_pods.png")
 
 Notes:
 A pod (as in a pod of whales or pea pod) is a relatively tightly coupled group of containers that are scheduled onto the same host. It models an application-specific "virtual host" in a containerized environment. Pods serve as units of scheduling, deployment, and horizontal scaling/replication, share fate, and share some resources, such as storage volumes and IP addresses.
