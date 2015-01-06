@@ -38,7 +38,7 @@ A single Kubernetes cluster is not intended to span multiple availability zones.
 
 --
 
-![Architecture](../images/kubernetes/architecture.png)  <!-- .element: class="stretch" -->
+![Architecture](../images/kubernetes/architecture.png)
 
 Notes:
 A running Kubernetes cluster contains node agents (kubelet) and master components (APIs, scheduler, etc), on top of a distributed storage solution.
