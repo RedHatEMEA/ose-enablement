@@ -21,9 +21,15 @@
 
 # Thursday
 
-* Cartridge Development Basics
+* Cartridge Development Basics (**presentation + labs 2 hours**)
 * Demo Time
-  * Autoscaling
-  * EAP Clustering & Session Replication
-  * Continuous Delivery
-* Reporting, Billing, Chargeback
+  * Autoscaling (**30 minutes**)
+  * EAP Clustering & Session Replication (**15-20 minutes**)
+  * Continuous Delivery (**30-40 minutes**)
+  * OpenShift v3 (**2 hours**)
+* Reporting, Showback (**1,5 hours**)
+  * CloudForms Integration
+  * Deploy OpenShift Infrastructure from CloudForms
+  * Review Reports available from OpenShift
+  * How is OpenShift Online doing Billing
+* Review [OpenShift ElasticSearch/Logstash/Kibana](https://github.com/RedHatEMEA/ose-elk) Integration (**30-45 minutes**)
