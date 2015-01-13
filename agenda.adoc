@@ -1,0 +1,48 @@
+= Monday
+
+* 10am - Introduction (15 minutes)
+* Course Overview (10 minutes)
+* Manual Installation of Infrastructure (Do we really need this?)
+* Installation using `ose-install` Utility (**combined**) (1 hour)
+* HA Setup with Geo Redundancy (1 hour)
+* Integration of OSE with Customer Environments (**combined**) (3 hours)
+** Integration into OpenStack
+** Integration into CloudForms
+** How is OpenShift Online doing Billing
+** Authentication and Authorization
+*** Advanced Kerberos Authentication (**Ed**)
+*** Authentication against Active Directory (**Buddy**)
+
+= Tuesday
+
+* Positioning and Messaging of OpenShift + xPaaS (**Cyrus**) (1 hour)
+* Life-Cycle Management (Nodes, Cartridges, Applications) (**Buddy**) (1 hour)
+* Third Party Cartridges (**Buddy**) (2 hour with lab)
+** Cassandra
+** MongoDB
+** Websphere Application Server
+*** ND Profile
+*** Liberty Profile
+** Windows.NET
+* Backup and Restore of Environment and Applications (**Andrea**) (2 hour)
+
+= Wednesday
+
+* Sizing Guidelines (**Andrea**)
+* Monitoring of OSE Infrastructure (**Andrea**)
+* Deployment Architectures
+* Deep Dive into Regions and Zones (**Ed**)
+* Configuring Teams (**Andrea**)
+
+= Thursday
+
+* Cartridge Development Basics (**presentation + labs 2 hours**)
+* Demo Time
+** Autoscaling (**30 minutes**)
+** EAP Clustering &amp; Session Replication (**15-20 minutes**) (**Andrea**)
+** Continuous Delivery (**30-40 minutes**) (**Andrea**)
+** OpenShift v3 (**2 hours**) (**Marek**)
+* Reporting, Showback (**1,5 hours**) (**Ed**)
+** Deploy OpenShift Infrastructure from CloudForms
+** Review Reports available from OpenShift
+* Review https://github.com/RedHatEMEA/ose-elk[OpenShift ElasticSearch/Logstash/Kibana] Integration (**30-45 minutes**) (**Buddy**)
