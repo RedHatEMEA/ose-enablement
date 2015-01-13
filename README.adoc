@@ -1,0 +1,25 @@
+= OpenShift Enablement
+
+This repository is used by the instructors if the OpenShift Enablement Training in Munich to host all relevant content for the Training in Munich.
+
+This README sets some housekeeping rules, so we are efficient during the training and have everything in place
+
+== Web Based Presentations
+
+Within this folder there is a place for web-based presentations using the reveal.js framework.
+Using Jeremy Browns' initial idea to push these presentations automatically out to OpenShift Online.
+The presentations are available from http://ose-rhmasters.rhcloud.com.
+
+The current Build Status of the web-based presentations is image:https://travis-ci.org/juhoffma/ose-enablement.svg?branch=master[Build Status]
+
+== Other Presentations
+
+All other presentation of the collaborators should go into this directory. It would be great if
+you could put them in `subdirectories` that are named like the agenda item they are covering.
+
+== Labs
+
+All Labs should be put under the `labs` directory. Labs must be placed inside a directory with the
+name of the agenda item.
+
+
