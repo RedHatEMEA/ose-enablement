@@ -24,7 +24,7 @@
 *** ND Profile
 *** Liberty Profile
 ** Windows.NET
-* Backup and Restore of Environment and Applications (**Andrea**) (2 hour)
+* Backup and Restore of Environment and Applications (**Andrea**) (1 hour including Labs)
 
 = Wednesday
 
