@@ -24,23 +24,23 @@
 *** ND Profile
 *** Liberty Profile
 ** Windows.NET
-* Backup and Restore of Environment and Applications (**Andrea**) (90 mins including Labs)
+* Managing Applications (**Andrea**) (1,5 hour with Labs)
 
 = Wednesday
 
-* Sizing Guidelines (**Andrea**)
-* Monitoring of OSE Infrastructure (**Andrea**)
+* Sizing Guidelines (**Andrea**) (30 minutes session only)
+* Monitoring of OSE Infrastructure (**Andrea**) (1 hour with Lab)
 * Deployment Architectures
 * Deep Dive into Regions and Zones (**Ed**)
-* Configuring Teams (**Andrea**)
+* Configuring Teams (**Andrea**) (1 hour with Labs)
 
 = Thursday
 
 * Cartridge Development Basics (**presentation + labs 2 hours**)
 * Demo Time
 ** Autoscaling (**30 minutes**)
-** EAP Clustering &amp; Session Replication (**15-20 minutes**) (**Andrea**)
-** Continuous Delivery (**30-40 minutes**) (**Andrea**)
+** EAP Clustering &amp; Session Replication (**Andrea**) (20 minutes demo only or 1 hour with lab)
+** Continuous Delivery on OSE (**Andrea**) (40 minutes session+demo only)
 ** OpenShift v3 (**2 hours**) (**Marek**)
 * Reporting, Showback (**1,5 hours**) (**Ed**)
 ** Deploy OpenShift Infrastructure from CloudForms
