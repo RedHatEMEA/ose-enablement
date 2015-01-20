@@ -1,98 +1,59 @@
-= Monday - Start at 10:00 AM
+Monday - Starting at 10:00 AM
 
-* 10am - Introduction ( 15 min )
-* Course Overview ( 10 min )
-* High Level Architecture Overview
-* Installation and Configuration ( 2 hours )
-* Life-Cycle Management (*Buddy*) - 1 hour
-** Nodes, Cartridges and Applications
-* Authentication and Authorization ( 2 hours )
-** Kerberos Authentication (**Ed**)
-** AD Authentication (**Buddy**)
-** LDAP Groups (**Buddy**)
-* Customer Case Study ( 30 min )
+	Introduction ( 15 mins )
+	Course Overview ( 10 mins )
+	High Level Architecture Overview
+	Installation and Configuration ( 2 hours )
+	Life-Cycle Management  (Buddy) - 1 hour
+		Nodes, Cartridges, Applications
+	Authentication and Authorisation ( 2 hours )
+		Kerberos Authentication ( Ed )
+		Active Directory Authentication ( Buddy )
+		LDAP / AD Groups ( Buddy )
+	Customer Case Study ( Andrea ) - 30 min
 
-= Tuesday - Start at 09:00 AM
+Tuesday - Starting at 09:00 AM
 
-* Positioning and Messaging ( 1 hour )
-** PaaS, xPaaS, DevOps Context
-* Configuring Teams ( 1 hour )
-* Sizing guidelines ( 30 min )
-* Reporting & Showback ( 2 hours )
-** Demo deployment of OpenShift from CloudForms
-** Review of available reporting facilities and tools from OpenShift
-** OpenShift online billing
-* Third Party Cartridges ( 2 hours )
-** Cassandra / Redis
-** IBM WAS
-** Windows .NET
-* Customer Case Study ( 30 min )
+	Positioning and Messaging ( Cyrus ) - 1 hour
+		PaaS, DevOps Context
+		OpenShift + xPaaS
+	Configuring Teams ( Andrea ) - 1 hour with labs
+	Sizing Guidelines ( Andrea ) - 30 min
+	Reporting, Showback ( Ed ) - 2 hours
+		Demo deployment of OpenShift Infrastructure from CloudForms
+		Review of available reporting facilities and tools from OpenShift
+		OpenShift Online billing 
+	Third Party Cartridges ( Buddy ) - 2 hours with Labs
+		Cassandra / Redis
+		Windows .NET
+		IBM WAS
+	Customer Case Study ( Ed ) - 30 min
 
-= Wednesday - Start at 09:00 AM
+Wednesday - Starting at 09:00 AM
 
-* Monitoring of OSE Infrastructure ( 1 hour )
-* Deep Dive into Regions and Zones ( 1 hour )
-* HA Setup with Geo Redundancy ( 1 hour )
-* Managing Applications ( 1.5 hours )
-** Backup and Restore
-** Migration of apps to another gear(s)
-** Deployment and Rollback
-* Continous Delivery with OpenShift ( 45 min )
-** CI + CD
-** Demo
-* Cartridge Development Basics ( 2 hours )
-** Presentation plus labs
-* Customer Case Study ( 30 min )
+	Monitoring of OSE Infrastructure (Andrea) - 1 hour with Lab
+	Deep Dive into Regions and Zones ( Ed ) - 1 hour
+	HA Setup with Geo Redundancy ( Ed ) - 1 hour
+	Managing Applications ( Andrea ) - 1.5 hours
+		Back & Restore
+		Migrating apps to another gear
+		Deployment & Rollback
+	Continuous Delivery ( Andrea ) - 45 min
+		CI & CD
+		Demo
+	Cartridge Development Basics ( Buddy ) - 2 hours
+		Presentation plus labs
+	Customer Case Study ( Ed ) - 30 min
 
-= Thursday - Start at 09:00 AM
+Thursday - Starting at 09:00 AM
 
-* OpenShift v3 Overview ( 2.5 hours )
-* Integration with IaaS IFs ( 1 hour )
-** CloudForms
-** OpenStack
-** Satellite
-* Demo Time
-** EAP Clustering &amp; Session Replication ( 1 hour )
-*** Demo plus Labs
-** Autoscaling ( 30 min )
-* Review https://github.com/RedHatEMEA/ose-elk[OpenShift ElasticSearch/Logstash/Kibana] Integration (45 min)
-* Course Feedback ( 15 min )
-
-
-* Confirm the dates Feb 9th-12th in Munich
-* Inform BUs and respective managers
-
-Messaging, Positioning and Demo :
-* OpenShift + xPaaS - Positioning and Messaging
-* Demo of application auto scaling -  Buddy
-* Demo EAP clustering & session replication - AM
-
-* CI / CD from - AM
-
-* HA set up, geo redundancy, regions, zones - Ed
-
-* Authentication and Authorisation - Ed Seymour & Buddy
-
-* Basic Installation, configuration - aim for 2 VMs
-
-* Life-Cycle Management : - Buddy
-Nodes, Cartridges, Applications  
-
-* Third party technologies on OpenShift
-Cassandra, MongoDB, WAS, Windows .NET - Buddy
-
-* Backup and restore of environment and applications - AM
-
-* Sizing Guidelines - Emphasis on VM vs Containers - AM, Buddy
-AM to collect the info from Vodafone Infinity project
-
-* Integration of OpenShift with Customer Environment.
-IaaS, Security, Demo from Alex Drahon ??
-
-* Monitoring, Wiley Introscope - AM
-
-* Cartridge development Development basics - Buddy
-
-* Deployment Architectures - All with one or two examples each
-
-* Reporting, Billing, Chargback, and Show back - CloudForms ?? , OSE scripts, online reports, Fujitsu charge back model based on VM level
+	OpenShift v3 Overview ( Marek ) - 2.5 hours
+	Integration with IaaS Infrastructure ( 1 hour )
+		CloudForms - Presentation ( Ed ) - 15 min
+		OpenStack - Presentation ( Ed ?? ) - 15 min
+		Satellite Kickstarts - Presentation ( Buddy ?? ) - 15 min
+	Demo Time ( combined ) - 1.5 hours
+		Autoscaling ( Buddy ) - 30 min
+		EAP Clustering & Session Replication - Demo & Lab (Andrea) - 1 hour
+	Review OpenShift ElasticSearch/Logstash/Kibana Integration ( Buddy ) - 45 min
+	Course Feedback ( 15 min )
