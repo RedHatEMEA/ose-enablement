@@ -2,24 +2,26 @@
 
 * 10am - Introduction (15 minutes)
 * Course Overview (10 minutes)
-* Manual Installation of Infrastructure (Do we really need this?)
-* Installation using `ose-install` Utility (**combined**) (1 hour)
-* HA Setup with Geo Redundancy (1 hour)
-* Integration of OSE with Customer Environments (**combined**) (3 hours)
-** Integration into OpenStack
-** Integration into CloudForms
+* Integration of OSE with IaaS Infrastructure (**combined**) (3 hours)
+** CloudForms - Presentation ( Ed ) - 15 min
+** OpenStack - Presentation ( Ed ?? ) - 15 min
+** Satellite Kickstarts - Presentation (**Buddy**) - 15 min
+** Puppet - Presentation (**Buddy**) - 15 min
 ** How is OpenShift Online doing Billing
-** Authentication and Authorization
-*** Advanced Kerberos Authentication (**Ed**)
-*** Authentication against Active Directory (**Buddy**)
+* Installation and Configuration using `ose-install` Utility (**combined**) (2 hour)
+** HA Setup with Geo Redundancy
+* Life-Cycle Management (**Buddy**) (1 hour)
+** (Nodes, Cartridges, Applications)
+* Authentication and Authorization
+** Advanced Kerberos Authentication (**Ed**)
+** Authentication against Active Directory (**Buddy**)
 
 = Tuesday
 
 * Positioning and Messaging of OpenShift + xPaaS (**Cyrus**) (1 hour)
-* Life-Cycle Management (Nodes, Cartridges, Applications) (**Buddy**) (1 hour)
 * Third Party Cartridges (**Buddy**) (2 hour with lab)
 ** Cassandra
-** MongoDB
+** Redis
 ** Websphere Application Server
 *** ND Profile
 *** Liberty Profile

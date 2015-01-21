@@ -7,31 +7,36 @@
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
-@import "/Users/buddy/dev/ose-enablement/bower_components/sass-web-fonts/web-fonts";
 // ---------------------------------------------
 
 
 
 // Include theme-specific fonts
-//@font-face {
-//	font-family: 'League Gothic';
-//	src: url('../../lib/font/league_gothic-webfont.eot');
-//	src: url('../../lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
-//		 url('../../lib/font/league_gothic-webfont.woff') format('woff'),
-//		 url('../../lib/font/league_gothic-webfont.ttf') format('truetype'),
-//		 url('../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
-//
-//	font-weight: normal;
-//	font-style: normal;
-//}
+@font-face {
+  font-family: 'overpassregular';
+  src: url('../../lib/font/Overpass_Regular-webfont.eot');
+  src: url('../../lib/font/Overpass_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../../lib/font/Overpass_Regular-webfont.woff') format('woff'),
+  url('../../lib/font/Overpass_Regular-webfont.ttf') format('truetype'),
+  url('../../lib/font/Overpass_Regular-webfont.svg#overpassregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-//@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@font-face {
+  font-family: 'overpassbold';
+  src: url('../../lib/font/Overpass_Bold-webfont.eot');
+  src: url('../../lib/font/Overpass_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../../lib/font/Overpass_Bold-webfont.woff') format('woff'),
+  url('../../lib/font/Overpass_Bold-webfont.ttf') format('truetype'),
+  url('../../lib/font/Overpass_Bold-webfont.svg#overpassbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 $web-fonts-protocol: "https"; // fonts will be loaded over HTTPS from here on.
 
-/**
- * Solarized colors by Ethan Schoonover
- */
 html * {
 	color-profile: sRGB;
 	rendering-intent: auto;
@@ -55,32 +60,62 @@ $blue:      #268bd2;
 $cyan:      #2aa198;
 $green:     #859900;
 
+//Red Hat Colors
+$redhat-red1:  #CC0000;
+$redhat-red2:  #821F1C;
+$redhat-red3:  #9E292B;
+
+$redhat1:      #000000;
+$redhat2:      #4E376B;
+$redhat3:      #003D6E;
+$redhat4:      #0093D9;
+$redhat5:      #BFDCE8;
+$redhat6:      #2C8596;
+$redhat7:      #ABB400;
+$redhat8:      #E3E936;
+$redhat9:      #DC9F2E;
+$redhat10:     #C8C5AC;
+$redhat11:     #60605B;
+$redhat12:     #FFFFFF;
+
+
 // Override theme settings (see ../template/settings.scss)
-$mainColor: $base00;
-$headingColor: $base01;
-$headingTextShadow: none;
-$backgroundColor: $base3;
-$linkColor: $blue;
+$mainColor: $redhat11;
+$headingColor: $redhat-red3;
+$headingTextShadow: $redhat10;
+$backgroundColor: $redhat5;
+$linkColor: $redhat4;
 $linkColorHover: lighten( $linkColor, 20% );
-$selectionBackgroundColor: $magenta;
-$mainFont: 'Open Sans', sans-serif;
-$headingFont: 'Just Another Hand';
+$selectionBackgroundColor: $redhat-red1;
+$mainFont: 'overpassregular', sans-serif;
+$headingFont: 'overpassbold';
 $mainFontSize: 36px;
 $headingTextTransform: none;
 
-@include web-fonts(
-("Open Sans": ("500", "600 italic")), "Just Another Hand"
-);
-
-
-
 // Background generator
-// @mixin bodyBackground() {
-// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
-// }
+@mixin bodyBackground() {
+ 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
+}
 
 
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+.reveal h1 {
+  text-shadow: $heading1TextShadow;
+  font-size: 2em;
+}
+
+.reveal h2 {
+  text-shadow: $heading1TextShadow;
+  font-size: 1.5em;
+  font-family: "overpassregular";
+}
+
+.reveal h3 {
+  text-shadow: $heading1TextShadow;
+  font-size: 1.3em;
+  font-family: "overpassregular";
+}
