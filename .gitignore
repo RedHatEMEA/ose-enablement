@@ -33,3 +33,5 @@ node_modules
 .sass-cache/
 
 .idea/
+web-based-presentations/css/reveal.css
+web-based-presentations/css/reveal.min.css
