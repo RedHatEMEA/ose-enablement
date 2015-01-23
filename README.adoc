@@ -10,7 +10,7 @@ Within this folder there is a place for web-based presentations using the reveal
 Using Jeremy Browns' initial idea to push these presentations automatically out to OpenShift Online.
 The presentations are available from http://ose-rhmasters.rhcloud.com.
 
-The current Build Status of the web-based presentations is image:https://travis-ci.org/juhoffma/ose-enablement.svg?branch=master[Build Status]
+The current Build Status of the web-based presentations is image:https://travis-ci.org/RedHatEMEA/ose-enablement.svg?branch=master[Build Status]
 
 == Other Presentations
 
