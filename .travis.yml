@@ -4,7 +4,7 @@ node_js:
 before_script:
   - "npm install -g grunt-cli"
 script:
-  - sh -c "cd web-based-presentations; grunt default"
+  - sh -c 'cd web-based-presentations && grunt default'
 deploy:
   provider: openshift
   user: jhoffmann@redhat.com
