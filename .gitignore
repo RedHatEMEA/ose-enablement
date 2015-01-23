@@ -35,3 +35,4 @@ node_modules
 .idea/
 web-based-presentations/css/reveal.css
 web-based-presentations/css/reveal.min.css
+web-based-presentations/js/reveal.min.js
