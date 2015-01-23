@@ -9,6 +9,8 @@ deploy:
   provider: openshift
   user: jhoffmann@redhat.com
   password:
-    secure: NONixE2Fxxxp0gwqb2aSqMrYFVBtHshIay7S/KKdQV8cfSyBJvtsfRDkkRVIgqJ4senIYq9QvyXFaSRSJPdUOEXBkWEMgPlF6Zfg1c0HuzpkFZDZFe6A/Ep2sO9OkZ0GprDh/zFlbkT4BS8LEs++Py5R+jI7ZfnMPfYbn8k31sw=
+    secure: jmFyX62NuSwZvwAwvyWepuTY86LUUNrZBudNV2tl09GVIPIN49/oglbiXLOqPeCfBjW1NUYra+AnipM8lxiOvi8ftjKgttbKqMiD5oridNyjaE1rh2ESZzTxG8FOsLZRHbsR3ymOBzHCw4Kwq6naaqGLAzU1jMGjXZcJ4CSuLPQ=
   app: ose-enablement
   domain: rhmasters
+  on:
+    repo: RedHatEMEA/ose-enablement
