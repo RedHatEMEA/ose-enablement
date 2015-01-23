@@ -4,7 +4,7 @@
 
 ---
 
-<!-- .slide: data-background="images/change-management.png" -->
+<!-- .slide: data-background="/2015-emea-enablement-training/images/change-management.png" -->
 
 ---
 
@@ -44,7 +44,7 @@ For systemic upgrades from previous versions of OpenShift Enterprise requiring f
 
 # Looking at it in detail <!-- .element: style="color: white" -->
 
-<!-- .slide: data-background="images/woman-looking-through-magnifying-glass.jpg" -->
+<!-- .slide: data-background="/2015-emea-enablement-training/images/woman-looking-through-magnifying-glass.jpg" -->
 
 --
 
@@ -84,11 +84,7 @@ you must first use the `ose-upgrade` tool to upgrade from 2.0 to 2.1, then use t
 * Disable any Change / Configuration Management Software that controls OSE (puppet, chef, etc.)
 * Review any dangling `rpmsave` or `.rpmnew` file from previous updates
 
-```                    $heading1Size: 3.77em;
-                       $heading2Size: 2.11em;
-                       $heading3Size: 1.55em;
-                       $heading4Size: 1.00em;
-
+```
 # updatedb
 # locate --regex '\.rpm(save|new)$'
 ```
@@ -108,7 +104,9 @@ Broker            | Node(s)
 `ose-upgrade pre` | `ose-upgrade pre`
 `ose-upgrade outage` | `ose-upgrade outage`
 
+--
 
+[Back to Agenda](/2015-emea-enablement-training/index.html#/1/1)
 
 
 
