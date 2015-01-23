@@ -2,11 +2,9 @@ language: node_js
 node_js:
   - 0.10
 before_script:
-  - "cd web-based-presentations"
   - "npm install -g grunt-cli"
 script:
-  - "cd web-based-presentations"
-  - "grunt default"
+  - sh -c "cd web-based-presentations; grunt default"
 deploy:
   provider: openshift
   user: jhoffmann@redhat.com
