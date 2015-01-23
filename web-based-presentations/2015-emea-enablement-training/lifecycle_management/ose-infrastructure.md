@@ -1,29 +1,3 @@
-# Lifecycle Management
-
-## Nodes, Gears, Community Cartridges, Applications, OpenShift
-
----
-
-<!-- .slide: data-background="/2015-emea-enablement-training/images/change-management.png" -->
-
----
-
-# What Changes can occur?
-
-* OpenShift Infrastructure
-* Cartridges
-    * Custom Cartridges
-    * Community Cartridges
-    * OpenShift Marketplace
-* Applications
-* OpenShift Major Versions
-* OpenShift Minor Versions (dot releases)
-
-
-Notes: OpenShift can be changed in various ways. Multiple components can be changed. There are different requirements for each change
-and how those changes are reflected within the system. We are going to review each one on its own.
-
----
 
 # OpenShift Infrastructure
 
@@ -95,18 +69,100 @@ you must first use the `ose-upgrade` tool to upgrade from 2.0 to 2.1, then use t
 
 --
 
-# `ose-upgrade` steps 2.0-2.1
+# `ose-upgrade` steps 1.2-2.0, 2.0-2.1
 
-Broker            | Node(s)
-:-----------------|------------------:
-`ose-upgrade begin` | `ose-upgrade begin`
-`yum install openshift-enterprise-upgrade-broker` | `yum install openshift-enterprise-upgrade-node`
-`ose-upgrade pre` | `ose-upgrade pre`
-`ose-upgrade outage` | `ose-upgrade outage`
+Broker           | Node(s)          | BSN(s)
+-----------------|------------------|-------------------
+`ose-upgrade begin` | `ose-upgrade begin` |
+`yum install openshift-enterprise-upgrade-broker` | `yum install openshift-enterprise-upgrade-node` |
+`ose-upgrade pre` | `ose-upgrade pre` |
+`ose-upgrade outage` | `ose-upgrade outage` |
+ | | `yum update`
+`ose-upgrade rpms` | `ose-upgrade rpms` |
+`ose-upgrade conf` | `ose-upgrade conf` |
+`ose-upgrade maintenance_mode` | `ose-upgrade maintenance_mode` |
+`ose-upgrade pending_ops` | |
 
 --
 
-[Back to Agenda](/2015-emea-enablement-training/index.html#/1/1)
+# `ose-upgrade` steps 1.2-2.0, 2.0-2.1
+
+Broker           | Node(s)          | BSN(s)
+-----------------|------------------|-------------------
+ `ose-upgrade confirm_nodes` | |
+ `ose-upgrade data` | |
+ `ose-upgrade gears` | |
+ | `ose-upgrade test_gears_complete` |
+ `ose-upgrade end_maintenance_mode` | `ose-upgrade end_maintenance_mode` |
+ | `oo-accept-node -v` |
+ `ose-upgrade post` | |
+ `oo-diagnostics -v` | |
+ `oo-admin-chk` | |
 
 
+--
+
+# Known Issues
+
+1. Because Jenkins applications cannot be migrated, follow these steps to regain functionality:
+  1. Save any modifications made to existing Jenkins jobs.
+  2. Remove the existing Jenkins application.
+  3. Add the Jenkins application again.
+  4. Add the Jenkins client cartridge as required.
+  5. Reapply the required modifications from the first step.
+2. There are no notifications when a gear is successfully migrated but fails to start. This may not be a
+migration failure because there may be multiple reasons why a gear fails to start. However, Red Hat
+recommends that you verify the operation of your applications after upgrading. The service
+`openshift-gears status` command may be helpful in certain situations.
+
+--
+
+# `ose-upgrade` steps 2.1-2.2
+
+Broker           | Node(s)          | BSN(s)
+-----------------|------------------|-------------------
+ `ose-upgrade begin` | `ose-upgrade begin` |
+ `yum install openshift-enterprise-upgrade-broker` | `yum install openshift-enterprise-upgrade-node` |
+ `ose-upgrade pre` | `ose-upgrade pre` |
+ | | `yum update`
+ `ose-upgrade rpms` | `ose-upgrade rpms` |
+ `ose-upgrade conf` | `ose-upgrade conf` |
+
+--
+
+# Heads up
+
+Starting with OpenShift Enterprise 2.2, the apache-mod-rewrite front-end server proxy plug-in is
+deprecated. New deployments of OpenShift Enterprise 2.2 now use the apache-vhost plug-in as the default.
+
+```
+# export OSE_UPGRADE_MIGRATE_VHOST=true
+```
+
+## If you do not want to migrate set **nothing** at all
+
+--
+
+# `ose-upgrade` steps 2.1-2.2 (cont.)
+
+Broker           | Node(s)          | BSN(s)
+-----------------|------------------|-------------------
+ `ose-upgrade maintenance_mode` | `ose-upgrade maintenance_mode` |
+ `ose-upgrade pending_ops` | |
+ `ose-upgrade confirm_nodes` | |
+ `ose-upgrade data` | |
+ `ose-upgrade gears` | |
+ | `ose-upgrade test_gears_complete` |
+ `ose-upgrade end_maintenance_mode` | `ose-upgrade end_maintenance_mode` |
+ | `oo-accept-node -v` |
+ `ose-upgrade post` | |
+
+--
+
+# `ose-upgrade` steps 2.1-2.2 (cont.)
+
+Broker           | Node(s)          | BSN(s)
+-----------------|------------------|-------------------
+ `oo-diagnostics -v` | |
+ `oo-admin-chk` | |
 
