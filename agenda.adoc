@@ -1,50 +1,59 @@
-= Monday
+= Monday - Start at 10:00 AM
 
-* 10am - Introduction (15 minutes)
-* Course Overview (10 minutes)
-* Integration of OSE with IaaS Infrastructure (**combined**) (3 hours)
-** CloudForms - Presentation ( Ed ) - 15 min
-** OpenStack - Presentation ( Ed ?? ) - 15 min
-** Satellite Kickstarts - Presentation (**Buddy**) - 15 min
-** Puppet - Presentation (**Buddy**) - 15 min
-** How is OpenShift Online doing Billing
-* Installation and Configuration using `ose-install` Utility (**combined**) (2 hour)
-** HA Setup with Geo Redundancy
-* Life-Cycle Management (**Buddy**) (1 hour)
-** (Nodes, Cartridges, Applications)
-* Authentication and Authorization
-** Advanced Kerberos Authentication (**Ed**)
-** Authentication against Active Directory (**Buddy**)
+* 10am - Introduction ( 15 min )
+* Course Overview ( 10 min )
+* High Level Architecture Overview
+* Installation and Configuration ( 2 hours )
+* Life-Cycle Management
+** Nodes, Cartridges and Applications
+* Authentication and Authorization ( 2 hours )
+** Kerberos Authentication
+** AD Authentication
+** LDAP Groups
+* Customer Case Study ( 30 min )
 
-= Tuesday
+= Tuesday - Start at 09:00 AM
 
-* Positioning and Messaging of OpenShift + xPaaS (**Cyrus**) (1 hour)
-* Third Party Cartridges (**Buddy**) (2 hour with lab)
-** Cassandra
-** Redis
-** Websphere Application Server
-*** ND Profile
-*** Liberty Profile
-** Windows.NET
-* Managing Applications (**Andrea**) (1,5 hour with Labs)
+* Positioning and Messaging ( 1 hour )
+** PaaS, xPaaS, DevOps Context
+* Configuring Teams ( 1 hour )
+* Sizing guidelines ( 30 min )
+* Reporting & Showback ( 2 hours )
+** Demo deployment of OpenShift from CloudForms
+** Review of available reporting facilities and tools from OpenShift
+** OpenShift online billing
+* Third Party Cartridges ( 2 hours )
+** Cassandra / Redis
+** IBM WAS
+** Windows .NET
+* Customer Case Study ( 30 min )
 
-= Wednesday
+= Wednesday - Start at 09:00 AM
 
-* Sizing Guidelines (**Andrea**) (30 minutes session only)
-* Monitoring of OSE Infrastructure (**Andrea**) (1 hour with Lab)
-* Deployment Architectures
-* Deep Dive into Regions and Zones (**Ed**)
-* Configuring Teams (**Andrea**) (1 hour with Labs)
+* Monitoring of OSE Infrastructure ( 1 hour )
+* Deep Dive into Regions and Zones ( 1 hour )
+* HA Setup with Geo Redundancy ( 1 hour )
+* Managing Applications ( 1.5 hours )
+** Backup and Restore
+** Migration of apps to another gear(s)
+** Deployment and Rollback
+* Continous Delivery with OpenShift ( 45 min )
+** CI + CD
+** Demo
+* Cartridge Development Basics ( 2 hours )
+** Presentation plus labs
+* Customer Case Study ( 30 min )
 
-= Thursday
+= Thursday - Start at 09:00 AM
 
-* Cartridge Development Basics (**presentation + labs 2 hours**)
+* OpenShift v3 Overview ( 2.5 hours )
+* Integration with IaaS IFs ( 1 hour )
+** CloudForms
+** OpenStack
+** Satellite
 * Demo Time
-** Autoscaling (**30 minutes**)
-** EAP Clustering &amp; Session Replication (**Andrea**) (20 minutes demo only or 1 hour with lab)
-** Continuous Delivery on OSE (**Andrea**) (40 minutes session+demo only)
-** OpenShift v3 (**2 hours**) (**Marek**)
-* Reporting, Showback (**1,5 hours**) (**Ed**)
-** Deploy OpenShift Infrastructure from CloudForms
-** Review Reports available from OpenShift
-* Review https://github.com/RedHatEMEA/ose-elk[OpenShift ElasticSearch/Logstash/Kibana] Integration (**30-45 minutes**) (**Buddy**)
+** EAP Clustering &amp; Session Replication ( 1 hour )
+*** Demo plus Labs
+** Autoscaling ( 30 min )
+* Review https://github.com/RedHatEMEA/ose-elk[OpenShift ElasticSearch/Logstash/Kibana] Integration (45 min)
+* Course Feedback ( 15 min )
