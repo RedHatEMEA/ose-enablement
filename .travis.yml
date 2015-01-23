@@ -13,4 +13,4 @@ deploy:
   app: ose
   domain: rhmasters
   on:
-    repo: juhoffma/ose-enablement
+    repo: RedHatEMEA/ose-enablement
