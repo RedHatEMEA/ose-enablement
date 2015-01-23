@@ -3,7 +3,7 @@ node_js:
   - 0.10
 before_install: npm install -g grunt-cli
 install: sh -c 'cd web-based-presentations && npm install'
-before_script: sh -c 'cd web-based-presentations && grunt build'
+before_script: sh -c 'cd web-based-presentations && grunt'
 script: sh -c 'cd web-based-presentations && grunt test'
 deploy:
   provider: openshift
