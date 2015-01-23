@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 0.10
+- 0.1
 before_install: npm install -g grunt-cli
 install: sh -c 'cd web-based-presentations && npm install'
 before_script: sh -c 'cd web-based-presentations && grunt'
@@ -9,8 +9,6 @@ deploy:
   provider: openshift
   user: jhoffmann@redhat.com
   password:
-    secure: IPsqZuEzpLVFCz319M6RPVZlYEQdAapGHnVoqiaWBy3d0vR/yQ85XuDZETgrRDwGF9Qbn53b05sDNBnIzHdc+2bcGh99L7BbSfpC2J3WSBOhBLD9M4cA4D4BUcvabt8RoIEGcsJIG+aZzNRIW/onVxiZK54Ns0Q5leIVlfpUrAg=
-  app: ose
+    secure: NONixE2Fxxxp0gwqb2aSqMrYFVBtHshIay7S/KKdQV8cfSyBJvtsfRDkkRVIgqJ4senIYq9QvyXFaSRSJPdUOEXBkWEMgPlF6Zfg1c0HuzpkFZDZFe6A/Ep2sO9OkZ0GprDh/zFlbkT4BS8LEs++Py5R+jI7ZfnMPfYbn8k31sw=
+  app: ose-enablement
   domain: rhmasters
-  on:
-    repo: RedHatEMEA/ose-enablement
