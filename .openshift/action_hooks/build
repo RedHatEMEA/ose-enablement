@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd $OPENSHIFT_REPO_DIR/web-based-presentations
+npm install -g grunt-cli
+npm install
+grunt
+grunt test
+cd $OPENSHIFT_REPO_DIR
+cp -a web-based-presentations/. .
