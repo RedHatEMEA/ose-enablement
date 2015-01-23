@@ -10,7 +10,7 @@ deploy:
   user: jhoffmann@redhat.com
   password:
     secure: jmFyX62NuSwZvwAwvyWepuTY86LUUNrZBudNV2tl09GVIPIN49/oglbiXLOqPeCfBjW1NUYra+AnipM8lxiOvi8ftjKgttbKqMiD5oridNyjaE1rh2ESZzTxG8FOsLZRHbsR3ymOBzHCw4Kwq6naaqGLAzU1jMGjXZcJ4CSuLPQ=
-  app: ose-enablement
+  app: ose
   domain: rhmasters
   on:
     repo: RedHatEMEA/ose-enablement
