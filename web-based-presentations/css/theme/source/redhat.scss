@@ -89,8 +89,14 @@ $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: $redhat-red1;
 $mainFont: 'overpassregular', sans-serif;
 $headingFont: 'overpassbold';
-$mainFontSize: 36px;
+$mainFontSize: 28px;
 $headingTextTransform: none;
+
+$heading1Size: 2.0em;
+$heading2Size: 1.8em;
+$heading3Size: 1.6em;
+$heading4Size: 1.4em;
+
 
 // Background generator
 @mixin bodyBackground() {

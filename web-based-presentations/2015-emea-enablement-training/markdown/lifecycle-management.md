@@ -74,6 +74,7 @@ you must first use the `ose-upgrade` tool to upgrade from 2.0 to 2.1, then use t
 * The upgrade process is logged under `/var/log/openshift/upgrade.log`
 * Use `ose-upgrade status` at any time to view all lists and to see what step needs to be executed next
 * Use `ose-upgrade all` on node hosts to accelerate the upgrade (**not advised for brokers**)
+* Different flow for different upgrades (1.2->2.0, 2.0->2.1, 2.1->2.2)
 
 --
 
@@ -83,18 +84,22 @@ you must first use the `ose-upgrade` tool to upgrade from 2.0 to 2.1, then use t
 * Disable any Change / Configuration Management Software that controls OSE (puppet, chef, etc.)
 * Review any dangling `rpmsave` or `.rpmnew` file from previous updates
 
-```
+```                    $heading1Size: 3.77em;
+                       $heading2Size: 2.11em;
+                       $heading3Size: 1.55em;
+                       $heading4Size: 1.00em;
+
 # updatedb
 # locate --regex '\.rpm(save|new)$'
 ```
 
-* Reviw [Asynchronous Errata Updates](https://access.redhat.com/documentation/en-US/OpenShift_Enterprise/2/html-single/Deployment_Guide/index.html#chap-Asynchronous_Errata_Updates)
+* Review [Asynchronous Errata Updates](https://access.redhat.com/documentation/en-US/OpenShift_Enterprise/2/html-single/Deployment_Guide/index.html#chap-Asynchronous_Errata_Updates)
 * Run `yum update` to make sure your system is up to date
 * Run `oo-admin-chk` on the broker and `oo-diagnostics -v` on all hosts to ensure environment stability
 
 --
 
-# `ose-upgrade` steps
+# `ose-upgrade` steps 2.0-2.1
 
 Broker            | Node(s)
 :-----------------|------------------:
