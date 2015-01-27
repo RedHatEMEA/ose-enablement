@@ -23,10 +23,10 @@ Tuesday - Starting at 09:00 AM
 		Demo deployment of OpenShift Infrastructure from CloudForms
 		Review of available reporting facilities and tools from OpenShift
 		OpenShift Online billing 
-	Third Party Cartridges ( Buddy ) - 2 hours with Labs
-		Cassandra / Redis
-		Windows .NET
-		IBM WAS
+	Managing Applications ( Andrea ) - 1.5 hours
+		Back & Restore
+		Migrating apps to another gear
+		Deployment & Rollback
 	Customer Case Study ( Ed ) - 30 min
 
 Wednesday - Starting at 09:00 AM
@@ -34,10 +34,10 @@ Wednesday - Starting at 09:00 AM
 	Monitoring of OSE Infrastructure (Andrea) - 1 hour with Lab
 	Deep Dive into Regions and Zones ( Ed ) - 1 hour
 	HA Setup with Geo Redundancy ( Ed ) - 1 hour
-	Managing Applications ( Andrea ) - 1.5 hours
-		Back & Restore
-		Migrating apps to another gear
-		Deployment & Rollback
+	Third Party Cartridges ( Buddy ) - 2 hours with Labs
+		Cassandra / Redis
+		Windows .NET
+		IBM WAS
 	Continuous Delivery ( Andrea ) - 45 min
 		CI & CD
 		Demo

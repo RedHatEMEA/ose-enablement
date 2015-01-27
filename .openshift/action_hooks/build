@@ -1,9 +1,30 @@
 #!/bin/bash
 
-cd $OPENSHIFT_REPO_DIR/web-based-presentations
-npm install -g grunt-cli
-npm install
-grunt
-grunt test
+# Save the old HOME so we can reset after script.
+# Bower and bower as it is run buy grunt both want
+# to touch .local and .config files in $HOME which
+# isn't writeable on OSE.  So we set $HOME to
+# the REPO_DIR temporarily.
+OLD_HOME=$HOME
+
+##########
 cd $OPENSHIFT_REPO_DIR
-cp -a web-based-presentations/. .
+export HOME=$OPENSHIFT_REPO_DIR
+
+##########
+echo "INFO: cd ${OPENSHIFT_REPO_DIR}web-based-presentations"
+cd ${OPENSHIFT_REPO_DIR}web-based-presentations
+
+echo "INFO: npm install"
+npm install
+
+echo "INFO: Running 'grunt default"
+./node_modules/.bin/grunt default
+
+echo "INFO: Removing ${OPENSHIFT_REPO_DIR}web-based-presentations/node_modules"
+rm -rf ${OPENSHIFT_REPO_DIR}web-based-presentations/node_modules
+rm ${OPENSHIFT_REPO_DIR}web-based-presentations/npm-debug.log
+
+#########
+export HOME=$OLD_HOME
+echo "INFO: HOME is $HOME"
