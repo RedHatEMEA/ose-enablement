@@ -41,7 +41,7 @@
 * Monitoring of OSE Infrastructure ( 1 hour )
 * Deep Dive into Regions and Zones ( 1 hour )
 * HA Setup with Geo Redundancy ( 1 hour )
-* Managing Applications ( 1.5 hours )
+* [Managing Applications](/2015-emea-enablement-training/ManagingApps/index.html) ( 1.5 hours )
   * Backup and Restore
   * Migration of apps to another gear(s)
   * Deployment and Rollback
@@ -62,8 +62,8 @@
   * OpenStack
   * Satellite
 * Demo Time
-  * EAP Clustering &amp; Session Replication ( 1 hour )
-  * Demo plus Labs
-    * Autoscaling ( 30 min )
+  * * [JBoss EAP Clustering - Session Replication](/2015-emea-enablement-training/jbosseap-ose/index.html) ( 1 hour )
+  	* Demo plus Labs
+  * Autoscaling ( 30 min )
   * Review https://github.com/RedHatEMEA/ose-elk[OpenShift ElasticSearch/Logstash/Kibana] Integration (45 min)
   * Course Feedback ( 15 min )
