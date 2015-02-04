@@ -23,7 +23,7 @@
 * Positioning and Messaging ( 1 hour )
   * PaaS, xPaaS, DevOps Context
 * [Configuring Teams](/2015-emea-enablement-training/Teams/index.html)
-* Sizing guidelines ( 30 min )
+* [Sizing guidelines](/2015-emea-enablement-training/Sizing/sizing.html) ( 30 min )
 * Reporting & Showback ( 2 hours )
   * Demo deployment of OpenShift from CloudForms
   * Review of available reporting facilities and tools from OpenShift
@@ -38,7 +38,7 @@
 
 # Wednesday - Start at 09:00 AM
 
-* Monitoring of OSE Infrastructure ( 1 hour )
+* [Monitoring of OSE Infrastructure](/2015-emea-enablement-training/Monitoring/monitoring.html ( 1 hour )
 * Deep Dive into Regions and Zones ( 1 hour )
 * HA Setup with Geo Redundancy ( 1 hour )
 * [Managing Applications](/2015-emea-enablement-training/ManagingApps/index.html) ( 1.5 hours )
