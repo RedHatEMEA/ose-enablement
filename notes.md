@@ -46,7 +46,7 @@ Wednesday - Starting at 09:00 AM
 	DevOps Interactive session ( Roger Nunn ) - 2 hours
 To join from a Red Hat Deskphone or Softphone, dial: 84336.
 
-************************************************
+*********************************************************************************
 To join or start the meeting, go to:
 https://bluejeans.com/467370209?ll=en&g=mvzwk6lnn52xeqdsmvsgqylufzrw63i=
 
@@ -57,7 +57,7 @@ Connecting directly from a room system?
 Just want to dial in? (https://www.intercallonline.com/listNumbersByCode.action?confCode=4068565755)
 1) +442035746870
 2) Enter Meeting ID: 4068565755
-
+*********************************************************************************
 	Customer Case Study ( Ed ) - 30 min
 
 Thursday - Starting at 09:00 AM
