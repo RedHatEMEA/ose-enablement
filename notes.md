@@ -34,15 +34,30 @@ Wednesday - Starting at 09:00 AM
 	Monitoring of OSE Infrastructure (Andrea) - 1 hour with Lab
 	Deep Dive into Regions and Zones ( Ed ) - 1 hour
 	HA Setup with Geo Redundancy ( Ed ) - 1 hour
-	Third Party Cartridges ( Buddy ) - 2 hours with Labs
+	Third Party Cartridges ( Buddy ) - 1 hour with Labs
 		Cassandra / Redis
 		Windows .NET
 		IBM WAS
+	Cartridge Development Basics ( Buddy ) - 1 hour
+		Presentation plus labs
 	Continuous Delivery ( Andrea ) - 45 min
 		CI & CD
 		Demo
-	Cartridge Development Basics ( Buddy ) - 2 hours
-		Presentation plus labs
+	DevOps Interactive session ( Roger Nunn ) - 2 hours
+To join from a Red Hat Deskphone or Softphone, dial: 84336.
+
+*********************************************************************************
+To join or start the meeting, go to:
+https://bluejeans.com/467370209?ll=en&g=mvzwk6lnn52xeqdsmvsgqylufzrw63i=
+
+Connecting directly from a room system?
+1) Dial: 199.48.152.152 or bjn.vc
+2) Enter Meeting ID: 467370209 -or- use the pairing code
+
+Just want to dial in? (https://www.intercallonline.com/listNumbersByCode.action?confCode=4068565755)
+1) +442035746870
+2) Enter Meeting ID: 4068565755
+*********************************************************************************
 	Customer Case Study ( Ed ) - 30 min
 
 Thursday - Starting at 09:00 AM

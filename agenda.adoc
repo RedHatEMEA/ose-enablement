@@ -4,7 +4,7 @@
 * Course Overview ( 10 min )
 * High Level Architecture Overview
 * Installation and Configuration ( 2 hours )
-* Life-Cycle Management
+* Life-Cycle Management ( 1 hour )
 ** Nodes, Cartridges and Applications
 * Authentication and Authorization ( 2 hours )
 ** Kerberos Authentication
@@ -22,10 +22,10 @@
 ** Demo deployment of OpenShift from CloudForms
 ** Review of available reporting facilities and tools from OpenShift
 ** OpenShift online billing
-* Third Party Cartridges ( 2 hours )
-** Cassandra / Redis
-** IBM WAS
-** Windows .NET
+* Managing Applications ( 1.5 hours )
+** Backup and Restore
+** Migration of apps to another gear(s)
+** Deployment and Rollback
 * Customer Case Study ( 30 min )
 
 = Wednesday - Start at 09:00 AM
@@ -33,15 +33,17 @@
 * Monitoring of OSE Infrastructure ( 1 hour )
 * Deep Dive into Regions and Zones ( 1 hour )
 * HA Setup with Geo Redundancy ( 1 hour )
-* Managing Applications ( 1.5 hours )
-** Backup and Restore
-** Migration of apps to another gear(s)
-** Deployment and Rollback
+* Cartridge Development Basics ( 1 hour )
+** Presentation plus labs
+* Third Party Cartridges ( 1 hour )
+** Cassandra / Redis
+** IBM WAS
+** Windows .NET
 * Continous Delivery with OpenShift ( 45 min )
 ** CI + CD
 ** Demo
-* Cartridge Development Basics ( 2 hours )
-** Presentation plus labs
+* DevOps SA / DA Interactive session ( Roger Nunn )
+** Remote Webinar
 * Customer Case Study ( 30 min )
 
 = Thursday - Start at 09:00 AM
