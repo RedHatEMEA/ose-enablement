@@ -22,10 +22,10 @@
 ** Demo deployment of OpenShift from CloudForms
 ** Review of available reporting facilities and tools from OpenShift
 ** OpenShift online billing
-* Third Party Cartridges ( 2 hours )
-** Cassandra / Redis
-** IBM WAS
-** Windows .NET
+* Managing Applications ( 1.5 hours )
+** Backup and Restore
+** Migration of apps to another gear(s)
+** Deployment and Rollback
 * Customer Case Study ( 30 min )
 
 = Wednesday - Start at 09:00 AM
@@ -33,10 +33,10 @@
 * Monitoring of OSE Infrastructure ( 1 hour )
 * Deep Dive into Regions and Zones ( 1 hour )
 * HA Setup with Geo Redundancy ( 1 hour )
-* Managing Applications ( 1.5 hours )
-** Backup and Restore
-** Migration of apps to another gear(s)
-** Deployment and Rollback
+* Third Party Cartridges ( 2 hours )
+** Cassandra / Redis
+** IBM WAS
+** Windows .NET
 * Continous Delivery with OpenShift ( 45 min )
 ** CI + CD
 ** Demo
