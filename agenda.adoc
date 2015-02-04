@@ -4,7 +4,7 @@
 * Course Overview ( 10 min )
 * High Level Architecture Overview
 * Installation and Configuration ( 2 hours )
-* Life-Cycle Management
+* Life-Cycle Management ( 1 hour )
 ** Nodes, Cartridges and Applications
 * Authentication and Authorization ( 2 hours )
 ** Kerberos Authentication
