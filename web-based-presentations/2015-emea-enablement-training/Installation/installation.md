@@ -46,6 +46,7 @@ writing permissions on the DNS server). In the meantime please use the
 HOSTS configuration in the /etc/hosts of your system. See the
 configuration attached for some copy+paste.
 
+
 ## Authentication steps:
 
 1. Login to https://ipa.gps.hst.ams2.redhat.com/ or SSH to ipa.gps.hst.ams2.redhat.com to change the user password. (This is a mandatory step. To know why refer to http://www.freeipa.org/page/New_Passwords_Expired)
