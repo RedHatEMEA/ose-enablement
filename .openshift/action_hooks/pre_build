@@ -28,6 +28,3 @@ rm ${OPENSHIFT_REPO_DIR}web-based-presentations/npm-debug.log
 #########
 export HOME=$OLD_HOME
 echo "INFO: HOME is $HOME"
-
-echo "INFO: Starting gear"
-gear start
