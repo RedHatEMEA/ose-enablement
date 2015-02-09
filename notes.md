@@ -14,7 +14,7 @@ Monday - Starting at 10:00 AM
 
 Tuesday - Starting at 09:00 AM
 
-	Positioning and Messaging ( Cyrus ) - 1 hour
+	Positioning and Messaging ( Andrea ) - 1 hour
 		PaaS, DevOps Context
 		OpenShift + xPaaS
 	Configuring Teams ( Andrea ) - 1 hour with labs
