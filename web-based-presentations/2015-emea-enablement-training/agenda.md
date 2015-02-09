@@ -4,17 +4,18 @@
 
 # Monday - Start at 10:00 AM
 
-* Introduction ( 15 min )
-* Course Overview ( 10 min )
+* Introduction ( 15 mins )
+* Course Overview ( 10 mins )
 * High Level Architecture Overview
 * Installation and Configuration ( 2 hours )
 * [Life-Cycle Management](/2015-emea-enablement-training/lifecycle_management/index.html)
-  * Nodes, Cartridges and Applications
-* Authentication and Authorization ( 2 hours )
-  * Kerberos Authentication
-  * AD Authentication
-  * LDAP Groups
-* Customer Case Study ( 30 min )
+* Life-Cycle Management  (Buddy) - 1 hour
+  * Nodes , Cartridges, Applications
+* Authentication and Authorisation ( 2 hours )
+  *  Kerberos Authentication ( Ed )
+  *  Active Directory Authentication ( Buddy )
+  *  LDAP / AD Groups ( Buddy )
+* Customer Case Study ( Andrea ) - 30 min
 
 --
 
