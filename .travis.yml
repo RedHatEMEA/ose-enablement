@@ -14,3 +14,6 @@ deploy:
   domain: rhmasters
   on:
     repo: RedHatEMEA/ose-enablement
+  skip_cleanup: true
+after_deploy:
+  - gear start
