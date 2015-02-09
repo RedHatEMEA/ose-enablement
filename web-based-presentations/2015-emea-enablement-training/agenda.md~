@@ -4,17 +4,17 @@
 
 # Monday - Start at 10:00 AM
 
-* Introduction ( 15 min )
-* Course Overview ( 10 min )
+* Introduction ( 15 mins )
+* Course Overview ( 10 mins )
 * High Level Architecture Overview
 * Installation and Configuration ( 2 hours )
 * [Life-Cycle Management](/2015-emea-enablement-training/lifecycle_management/index.html)
-  * Nodes, Cartridges and Applications
-* Authentication and Authorization ( 2 hours )
-  * Kerberos Authentication
-  * AD Authentication
-  * LDAP Groups
-* Customer Case Study ( 30 min )
+  * Nodes , Cartridges, Applications
+* Authentication and Authorisation ( 2 hours )
+  *  Kerberos Authentication ( Ed )
+  *  Active Directory Authentication ( Buddy )
+  *  LDAP / AD Groups ( Buddy )
+* [Customer Case Study](/2015-emea-enablement-training/case_studies/ose_case_study1.pdf)( Andrea ) - 30 min
 
 --
 
@@ -22,23 +22,24 @@
 
 * Positioning and Messaging ( 1 hour )
   * PaaS, xPaaS, DevOps Context
-* [Configuring Teams](/2015-emea-enablement-training/Teams/index.html)
-* [Sizing guidelines](/2015-emea-enablement-training/Sizing/Sizing.html) ( 30 min )
-* Reporting & Showback ( 2 hours )
-  * Demo deployment of OpenShift from CloudForms
-  * Review of available reporting facilities and tools from OpenShift
-  * OpenShift online billing
-* Third Party Cartridges ( 2 hours )
-  * Cassandra / Redis
-  * IBM WAS
-  * Windows .NET
-* Customer Case Study ( 30 min )
+* [Configuring Teams](/2015-emea-enablement-training/Teams/)  ( 1 hour with labs )
+* [Sizing guidelines](/2015-emea-enablement-training/Sizing/) ( 30 min )
+* Reporting, Showback ( Ed ) - 2 hours
+  *  Demo deployment of OpenShift Infrastructure from CloudForms
+  *  Review of available reporting facilities and tools from OpenShift
+  *  OpenShift Online billing 
+* [Managing Applications](/2015-emea-enablement-training/ManagingApps/) ( 1.5 hours with labs )
+  *  Back & Restore
+  *  Migrating apps to another gear
+  *  Deployment & Rollback
+*Customer Case Study ( Ed ) - 30 min
+
 
 --
 
 # Wednesday - Start at 09:00 AM
 
-* Monitoring of OSE Infrastructure ( 1 hour )
+* [Monitoring of OSE Infrastructure](/2015-emea-enablement-training/Monitoring/monitoring.html ( 1 hour )
 * Deep Dive into Regions and Zones ( 1 hour )
 * HA Setup with Geo Redundancy ( 1 hour )
 * [Managing Applications](/2015-emea-enablement-training/ManagingApps/index.html) ( 1.5 hours )
