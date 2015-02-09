@@ -63,7 +63,7 @@ OSE 2.2 requires RHEL 6.6.
 You will notice a combination of some RHUI channels enabled in addition to the
 CDN.  Your EC2 image has already been registered with RHN through
 subscription-manager and the needed channels subscribed to via
-/etc/yum.repos.d/.  oo-install requires the following packages:
+/etc/yum.repos.d/.  oo-install requires the following packages (on all systems):
 
     $ yum -y install ruby unzip curl ruby193-ruby yum-plugin-priorities
 
