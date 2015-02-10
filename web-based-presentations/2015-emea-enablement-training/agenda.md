@@ -14,13 +14,13 @@
   *  Kerberos Authentication ( Ed )
   *  Active Directory Authentication ( Buddy )
   *  LDAP / AD Groups ( Buddy )
-* [Customer Case Study](/2015-emea-enablement-training/case_studies/ose_case_study1.pdf)( Andrea ) - 30 min
+* [Customer Case Study](/2015-emea-enablement-training/case_studies/Monday_AMorena-CaseStudy.pdf)( Andrea ) - 30 min
 
 --
 
 # Tuesday - Start at 09:00 AM
 
-* Positioning and Messaging ( 1 hour )
+* [Openshift: Positioning and Messaging](/2015-emea-enablement-training/OSE_positioning.pdf) ( 45 mins )
   * PaaS, xPaaS, DevOps Context
 * [Configuring Teams](/2015-emea-enablement-training/Teams/)  ( 1 hour with labs )
 * [Sizing guidelines](/2015-emea-enablement-training/Sizing/) ( 30 min )

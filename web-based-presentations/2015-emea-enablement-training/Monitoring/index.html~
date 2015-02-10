@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Openshift: Working with Teams</title>
+        
+
+        <meta name="description" content="Teams">
+        <meta name="author" content="Andrea Morena">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="/css/reveal.css">
+        <link rel="stylesheet" href="/content/common/css/redhat.css" id="theme">
+
+        <link rel="stylesheet" href="/lib/css/zenburn.css">
+
+        
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+		<!-- Live reload -->
+		<script>document.write('<script defer src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+                <section data-markdown data-separator="^\n---\n" data-vertical="^\n--\n" data-notes="^Notes:">
+                    <script type="text/template">
+                    ### Working with Teams
+                    Andrea Morena - Red Hat
+                    
+                    [@AndreaMorena5] [1]
+                    [1]: http://twitter.com/AndreaMorena5/ "@AndreaMorena5"
+                    <amorena@redhat.com>
+                    </script>
+                </section>
+		<section data-markdown="Teams.md"
+					data-separator="^---"
+					data-vertical="^--"
+					data-notes="^Notes:">
+		</section>
+                <section data-markdown="/content/common/markdown/thankyou.md" data-separator="^\n---\n" data-vertical="^\n--\n"></section>
+            </div>
+        </div>
+
+        <script src="/lib/js/head.min.js"></script>
+        <script src="/js/reveal.js"></script>
+
+        <script>
+
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                                slideNumber: true,
+                history: true,
+                center: true,
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '/plugin/notes/notes.js' }
+                ]
+            });
+
+        </script>
+<!--
+    <div class="footer" class="share-reveal" style="position: absolute; bottom: 10px; left: 50%; margin-left: -200px; z-index: 20;">
+      <p>JEREMY BROWN &#8212; APRIL 2014</p>
+
+    </div>
+    -->
+    </body>
+</html>
