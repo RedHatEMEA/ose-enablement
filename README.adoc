@@ -22,4 +22,8 @@ you could put them in `subdirectories` that are named like the agenda item they 
 All Labs should be put under the `labs` directory. Labs must be placed inside a directory with the
 name of the agenda item.
 
+== Useful links and information
+
+http://etherpad.corp.redhat.com/OSE-Enablement
+
 
