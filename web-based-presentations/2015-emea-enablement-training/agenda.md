@@ -32,7 +32,7 @@
   *  Back & Restore
   *  Migrating apps to another gear
   *  Deployment & Rollback
-*Customer Case Study ( Ed ) - 30 min
+* Customer Case Study ( Ed ) - 30 min
 
 
 --
