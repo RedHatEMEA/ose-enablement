@@ -22,11 +22,11 @@
 #####BROKER
 
 * __`oo-accept-broker`__
-  - checks that your broker setup is valid and functional (basic test)
+  - checks that your broker setup is valid and functional (packages, rpms, services, SELinux mode, connectivity,..)
 * __`oo-admin-chk`__
-  - checks the consistency throughout all node hosts and gears in an OpenShift Enterprise deployment
+  - checks the consistency / response time throughout all node hosts and gears in an OpenShift Enterprise deployment
 * __`oo-accept-systems`__
-  - verify that the settings on node hosts are valid and can be used by a broker host
+  - verify that the settings on node hosts are valid and can be used by a broker host (cartridges, Public IP, ..)
 * __`oo-mco ping`__ (check that nodes respond to MCollective)
 * __`oo-stats`__ (check capacity)
 
@@ -36,12 +36,11 @@
 
 * __`oo-accept-node`__
   - checks that node setup is valid and functional and its gears are in good condition
-  - check Selinux status (enforcing)
-  - check Iptables status (make sure rules are loaded)
+  - check Selinux status
 * __`oo-idler-stats`__ (displays basic statistics about gears on a node)
 
 
-__Try to keep ex-nodes as similar as possible and monitor to ensure this__
+__Try to keep nodes as similar as possible and monitor to ensure this__
 
 ---
 ###Monitoring Best Practices
