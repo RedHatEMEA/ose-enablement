@@ -47,9 +47,10 @@
 * [Cartridge Development Basics](/2015-emea-enablement-training/Cartridges/) (
 Buddy ) - 1 hour
 * Third Party Cartridges ( Buddy ) - 1 hour with Labs
-  *  Cassandra / Redis
-  *  Windows .NET
-  *  IBM WAS
+  *  [Cassandra](https://github.com/juhoffma/openshift-origin-cartridge-cassandra) / [Redis](https://github.com/smarterclayton/openshift-redis-cart)
+  *  [Windows .NET](https://github.com/RGenSolutions/openshift.net)
+  *  [IBM WAS](https://github.com/juhoffma/openshift-origin-websphere-cartridge)
+    * [Step-by-Step Installation Instructions](https://mojo.redhat.com/docs/DOC-984600)
 * Continuous Delivery ( Andrea ) - 45 min
   *  CI & CD
   *  Demo

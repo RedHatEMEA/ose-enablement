@@ -824,3 +824,12 @@ Subscribe to Events
 
 --
 
+# Resources
+
+* [Windows .NET on OpenShift](https://www.youtube.com/watch?v=rtubl2QyqKQ)
+* [Screencast on IBM WAS on OpenShift](https://mojo.redhat.com/videos/927603)
+* [Cartridge Development Guide](http://www.openshift.org/documentation/oo_cartridge_developers_guide.html)
+* [Cartridge Reflector](http://cartreflect-claytondev.rhcloud.com)
+* [Websphere Cartridge](https://github.com/juhoffma/openshift-origin-websphere-cartridge)
+* [Weblogic Cartridge](https://github.com/juhoffma/openshift-origin-weblogic-cartridge)
+* [Cassandra Cartridge](https://github.com/juhoffma/openshift-origin-cartridge-cassandra)
