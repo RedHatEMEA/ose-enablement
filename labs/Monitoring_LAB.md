@@ -190,7 +190,7 @@ host name:
 
 To verify this, you can enter in the following URL in your web browser:
 
-    http://localhost/admin-console/capacity/profiles.json
+    http://localhost:8080/admin-console/capacity/profiles.json
 
 You should see output similar to the following:
 
