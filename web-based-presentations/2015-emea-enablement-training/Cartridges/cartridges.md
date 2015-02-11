@@ -149,7 +149,7 @@ by this cartridge.
 
     Version: '2.0.8'
 
-`Versions` is the list of the versions of the software packaged by this
+`Versions`is the list of the versions of the software packaged by this
 cartridge.
 
     Versions:
@@ -161,7 +161,8 @@ cartridge.
 
 # Multiple Versions and the Console Display
 
-You can control the way multiple Versions are displayed inside the Web UI
+You can control the way multiple Versions are displayed inside the Web UI by
+overriding the default definitions
 
     Version-Overrides:
       '1.2.4':
@@ -352,4 +353,474 @@ with the web_proxy cartridge, then you can specify:
     - components:
       - web_proxy
       - web_framework
+
+--
+
+# Scaling
+
+    Scaling:
+      Min: 1
+      Max: -1
+
+This section defines the scaling parameters for a cartridge and is applicable
+when the cartridge is added to a scalable application. The `Min` and `Max`
+parameters define the scaling limits for the cartridge. Setting both the `Min`
+and `Max` equal to 1 indicates that the cartridge cannot scale.
+
+On the other hand, if Max is specified as -1, then there is no maximum
+scaling limit and the cartridge can scale up as long as the user’s gear limit
+is not exceeded. The scaling limits are enforced during auto-scaling as well
+as when setting the cartridge scaling limits manually.
+
+--
+
+# Scaling with Group Overrides
+
+* With `Group-Overrides` the scaling configuration should match. Sometimes this
+ is not desirable
+* Think `web_proxy` (HA-proxy)
+  * Should be co-located with `web_framework` but only in the head gear
+
+* OpenShift provides the `Multiplier` keyword.
+
+[HA-Proxy](https://github.com/openshift/origin-server/blob/master/cartridges/openshift-origin-cartridge-haproxy/metadata/manifest.yml)
+
+    Scaling:
+      Min: 1
+      Max: 1
+      Multiplier: -1
+
+--
+
+# Provides
+
+Provides is a list of features or functionalities that the cartridge provides
+to the application
+
+    Provides:
+    - jbosseap-6
+    - jbosseap
+    - jboss-eap6
+    - jbosseap-standalone
+    - jboss-eap6-standalone
+
+--
+
+# Requires
+
+Requires is a list of features or functionalities that this cartridge depends
+upon for its operation. These dependencies would be matched against other
+available cartridges to find the ones that provide them. For example, a
+framework cartridge like Rails could require a language/runtime cartridge like
+Ruby. In this case, if an application is being created with the Rails cartridge,
+based on the Requires specification, a cartridge that provides Ruby would be
+automatically added to the application.
+
+The functionality specified in the Requires section must identify a single
+cartridge. In case multiple cartridges are matched, then the cartridge cannot
+be added and an error is raised to the user.
+
+Not really used (as in did not find it in any cartridge)
+
+--
+
+# Source-Url
+
+`Source-Url`is used when you self-distribute your cartridges. They are
+downloaded at the time the application is created
+
+    Source-Url: https://github.com/gshipley/openshift-cartridge-oracle-saas.git
+
+--
+
+# Cartridge Reflector
+
+During Cartridge Development you can use the [Cartridge Reflector](https://cartreflect-claytondev.rhcloud.com)
+to automatically create the URL for you.
+
+https://github.com/smarterclayton/cartridge-reflector
+
+--
+
+# Additional-Control-Actions
+
+The `Additional-Control-Actions` element is a list of optional actions
+supported by your cartridge. `threaddump` is an example of one such action
+
+    Additional-Control-Actions:
+    - threaddump
+
+--
+
+# Exposing TCP Endpoints
+
+Most cartridges provide a service by binding to one or many ports. Cartridges
+must explicitly declare which ports they will bind to, and provide meaningful
+variable names to describe the following:
+
+* Any IP addresses necessary for binding
+* The gear-local ports to which the cartridge services will bind
+* (Optional) Publicly proxied ports which expose gear-local ports for use by
+the application’s users or intra-gear. These endpoint ports are only created
+when the application is scalable.
+
+--
+
+# Exposing TCP Endpoints cont.
+
+In addition to IP and port definitions, Endpoints are where front-end httpd
+mappings for your cartridge are declared to route traffic from the outside
+world to your cartridge’s services.
+
+    Endpoints:
+    - Private-IP-Name: IP
+      Private-Port-Name: HTTP_PORT
+      Private-Port: 8080
+      Public-Port-Name: HTTP_PROXY_PORT
+      Protocols:
+      - http
+      - ws
+      Options:
+        primary: true
+
+--
+
+# Example
+
+    Name: CustomCart
+    Cartridge-Short-Name: CUSTOMCART
+    # ...
+    Endpoints:
+      - Private-IP-Name:   HTTP_IP
+        Private-Port-Name: WEB_PORT
+        Private-Port:      8080
+        Public-Port-Name:  WEB_PROXY_PORT
+
+      - Private-IP-Name:   HTTP_IP
+        Private-Port-Name: ADMIN_PORT
+        Private-Port:      9000
+        Public-Port-Name:  ADMIN_PROXY_PORT
+
+      - Private-IP-Name:   INTERNAL_SERVICE_IP
+        Private-Port-Name: 5544
+        Public-Port-Name:  INTERNAL_SERVICE_PORT
+
+will generate
+
+    # Internal IP/port allocations
+    OPENSHIFT_CUSTOMCART_HTTP_IP=<assigned internal IP 1>
+    OPENSHIFT_CUSTOMCART_WEB_PORT=8080
+    OPENSHIFT_CUSTOMCART_ADMIN_PORT=9000
+    OPENSHIFT_CUSTOMCART_INTERNAL_SERVICE_IP=<assigned internal IP 2>
+    OPENSHIFT_CUSTOMCART_INTERNAL_SERVICE_PORT=5544
+
+    # Public proxy port mappings
+    OPENSHIFT_CUSTOMCART_WEB_PROXY_PORT=<assigned public port 1>
+    OPENSHIFT_CUSTOMCART_ADMIN_PROXY_PORT=<assigned public port 2>
+
+--
+
+# Example Mappings
+
+    Endpoints:
+      - Private-IP-Name:   HTTP_IP
+        Private-Port-Name: WEB_PORT
+        Private-Port:      8080
+        Public-Port-Name:  WEB_PROXY_PORT
+        Mappings:
+          - Frontend:      "/web_front"
+            Backend:       "/web_back"
+          - Frontend:      "/socket_front"
+            Backend:       "/socket_back"
+            Options:       { "websocket": true }
+      - Private-IP-Name:   HTTP_IP
+        Private-Port-Name: ADMIN_PORT
+        Private-Port:      9000
+        Public-Port-Name:  ADMIN_PROXY_PORT
+        Mappings:
+          - Frontend:      "/admin_front"
+          - Backend:       "/admin_back"
+
+will generate
+
+    http://<app dns>/web_front    => http://OPENSHIFT_CUSTOMCART_HTTP_IP:8080/web_back
+    http://<app dns>/socket_front => http://OPENSHIFT_CUSTOMCART_HTTP_IP:8080/socket_back
+    http://<app dns>/admin_front  => http://OPENSHIFT_CUSTOMCART_HTTP_IP:9000/admin_back
+
+--
+
+# Mapping Options
+
+    Mappings:
+              - Frontend:      "/web_front"
+                Backend:       "/web_back"
+              - Frontend:      "/socket_front"
+                Backend:       "/socket_back"
+                Options:       { "websocket": true }
+
+* `websocket` - Enable web sockets on a particular path
+* `gone` - Mark the path as gone (uri is ignored)
+* `forbidden` - Mark the path as forbidden (uri is ignored)
+* `noproxy` - Mark the path as not proxied (uri is ignored)
+* `redirect` - Use redirection to uri instead of proxy (uri must be a path)
+* `file` - Ignore request and load file path contained in uri (must be path)
+* `tohttps` - Redirect request to https and use the path contained in the uri
+(must be path)
+
+--
+
+# Managed Files
+
+[metadata/managed_files.yml](https://github.com/openshift/origin-server/blob/master/cartridges/openshift-origin-cartridge-jbosseap/metadata/managed_files.yml)
+
+    locked_files:
+    processed_templates:
+    setup_rewritten:
+    dependency_dirs:
+    build_dependency_dirs:
+    snapshot_exclusions:
+
+--
+
+# locked_files
+
+Important so files are not overwritten or modified through the consumer of
+your cartridge (think lifecycle `pre_build` or `post_build`)
+
+    locked_files:
+    - bin/
+    - bin/*
+    - tools/
+    - tools/*
+    - metadata/
+    - metadata/*
+    - hooks/
+    - hooks/*
+    - env/
+    - env/OPENSHIFT_JBOSSEAP_DIR
+    - env/OPENSHIFT_JBOSSEAP_JDK*
+    - env/M2_HOME
+    - jboss_cfg_backup/
+
+--
+
+# processed_templates
+
+    processed_templates:
+    - 'metadata/jenkins_artifacts_glob.erb'
+
+Definition of ERB Templates. You can also define to process any file with `
+.erb` extension.
+
+    processed_templates:
+    - '**/*.erb'
+
+ERB Templates eases the process of creating configuration files with dynamic
+information
+
+--
+
+# Sample conf.d/openshift.conf.erb
+
+    ServerRoot "<%= ENV['OPENSHIFT_HOMEDIR'] + "/ruby-1.8" %>"
+    DocumentRoot "<%= ENV['OPENSHIFT_REPO_DIR'] + "/public" %>"
+    Listen <%= ENV['OPENSHIFT_RUBY_IP'] + ':' + ENV['OPENSHIFT_RUBY_PORT'] %>
+    User <%= ENV['OPENSHIFT_GEAR_UUID'] %>
+    Group <%= ENV['OPENSHIFT_GEAR_UUID'] %>
+
+    ErrorLog "|/usr/sbin/rotatelogs <%= ENV['OPENSHIFT_HOMEDIR']%>/ruby-1.8/logs/error_log-%Y%m%d-%H%M%S-%Z 86400"
+    CustomLog "|/usr/sbin/rotatelogs <%= ENV['OPENSHIFT_HOMEDIR']%>/logs/access_log-%Y%m%d-%H%M%S-%Z 86400" combined
+
+    PassengerUser <%= ENV['OPENSHIFT_GEAR_UUID'] %>
+    PassengerPreStart http://<%= ENV['OPENSHIFT_RUBY_IP'] + ':' + ENV['OPENSHIFT_RUBY_PORT'] %>/
+    PassengerSpawnIPAddress <%= ENV['OPENSHIFT_RUBY_IP'] %>
+    PassengerUseGlobalQueue off
+    <Directory <%= ENV['OPENSHIFT_REPO_DIR]%>/public>
+      AllowOverride all
+      Options -MultiViews
+    </Directory>
+
+--
+
+# setup_rewritten
+
+Any files created during setup should be added to setup_rewritten section of
+metadata/managed_files.yml. These files will be deleted prior to setup being
+run during upgrades.
+
+    setup_rewritten:
+    - versions/*
+
+--
+
+# dependency_- and build_dependency_dirs
+
+Directories that can be referenced during the build phase as
+`$OPENSHIFT_DEPENDENCIES_DIR` and `$OPENSHIFT_BUILD_DEPENDENCIES_DIR`
+
+    dependency_dirs:
+    - standalone/deployments: deployments
+    build_dependency_dirs:
+    - ~/.m2
+
+--
+
+# snapshot_exclusions and restore_transforms
+
+OpenShift uses the `tar` command when backing up and restoring the gear that
+contains your cartridge. `snapshot_exclusions` entry contains an array of
+patterns of files that will not be backed up or restored.
+
+`restore_transforms` entry contains scripts that will be used to transform
+file names during restore.
+
+    snapshot_exclusions:
+    - standalone/tmp
+
+--
+
+# Template Directory
+
+--
+
+![directory](images/directory_layout.jpg)
+
+--
+
+The `template` or `template.git` directory should provide an minimal example of
+an application written in the language/framework your cartridge is packaging.
+Your application should welcome the application developer to your cartridge and
+let them see that your cartridge has indeed been installed and operates. If you
+provide a template directory, OpenShift will transform it into a bare git
+repository for use by the application developer.
+
+If you provide a template.git directory, OpenShift will copy the directory for
+use by the application developer.
+
+[Example JBoss EAP Template](https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-jbosseap/versions/shared/template)
+
+--
+
+# Marker Files
+
+The sub-directory `.openshift/markers` may contain example files for the
+application developer. These files denote behavior you are expected to honor in
+your cartridge’s lifecycle (`/bin/control`).
+
+--
+
+# Action Hooks
+
+The sub-directory `.openshift/action_hooks` will contain code the application
+developer wishes to be run during lifecycle changes. Examples would be:
+
+    pre_start_`cartridge name`
+    post_start_`cartridge name`
+    pre_stop_`cartridge name`
+    ...
+
+--
+
+# Cartridge Scripts
+
+Scripts will run directly from the cartridge home directory. make sure they
+are executable.
+
+    chmod +x bin/*
+
+on Windows
+
+    git update-index --chmod=+x bin/*
+
+--
+
+# Mandatory Scripts
+
+* `control` Command cartridge to report or change state
+
+# Optional Scripts
+
+* `setup` Prepare this instance of cartridge to be operational for the initial
+install and each incompatible upgrade
+* `install` Prepare this instance of cartridge to be operational for the initial
+install
+* `post_install` An opportunity for configuration after the cartridge has been
+started for the initial install
+* `teardown` Prepare this instance of cartridge to be removed
+
+--
+
+# control script lifecycle
+
+* `update-configuration`, `pre-build`, `build`, `deploy`, or `post-deploy`
+* `start` Start the software your cartridge controls
+* `stop` Stop the software your cartridge controls
+* `status` Return an 0 exit status if your cartridge code is running
+* `reload` Your cartridge and the packaged software needs to re-read their
+configuration information (this operation will only be called if your cartridge
+is running)
+* `restart` Stop current process and start a new one for the code your
+cartridge packages
+* `threaddump` If applicable, your cartridge should signal the packaged
+software to perform a thread dump
+* `tidy` All unused resources should be released (it is at your discretion to
+determine what should be done; be frugal as on some systems resources may be very limited)
+
+--
+
+# control script lifecycle (cont.)
+
+* `pre-snapshot` Prepare the cartridge for a snapshot, e.g. dump database to
+flat file
+* `post-snapshot` Clean up the cartridge after snapshot, e.g. remove database
+dump file
+* `pre-restore` Prepare the cartridge for restore
+* `post-restore` Clean up the cartridge after being restored, load database
+with data from flat file
+
+--
+
+# Cartridge Events
+
+Event scripts reside in the `hooks` directory
+
+Publish Events
+
+    Publishes:
+      <event name>:
+        Type: "<event type>"
+      ...
+
+Subscribe to Events
+
+    Subscribes:
+      <event name>:
+        Type: "<event type>"
+      ...
+
+--
+
+# Event Example
+
+![](images/mysql_publish_manifest.jpg)
+
+![](images/mysql_hooks.jpg)
+
+--
+
+# Inside the publish script
+
+    #!/bin/bash
+
+    mysql_url="mysql://$OPENSHIFT_MYSQL_DB_USERNAME:$OPENSHIFT_MYSQL_DB_PASSWORD@$OPENSHIFT_GEAR_DNS:$OPENSHIFT_MYSQL_DB_PROXY_PORT/"
+
+    echo "OPENSHIFT_MYSQL_DB_GEAR_UUID=$OPENSHIFT_GEAR_UUID"
+    echo "OPENSHIFT_MYSQL_DB_GEAR_DNS=$OPENSHIFT_GEAR_DNS"
+    echo "OPENSHIFT_MYSQL_DB_USERNAME=$OPENSHIFT_MYSQL_DB_USERNAME"
+    echo "OPENSHIFT_MYSQL_DB_PASSWORD=$OPENSHIFT_MYSQL_DB_PASSWORD"
+    echo "OPENSHIFT_MYSQL_DB_HOST=$OPENSHIFT_GEAR_DNS"
+    echo "OPENSHIFT_MYSQL_DB_PORT=$OPENSHIFT_MYSQL_DB_PROXY_PORT"
+    echo "OPENSHIFT_MYSQL_DB_URL=$mysql_url"
+
+--
 
