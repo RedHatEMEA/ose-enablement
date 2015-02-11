@@ -42,12 +42,14 @@
 * [Monitoring of OSE Infrastructure](/2015-emea-enablement-training/Monitoring/) ( 1 hour with labs )
 * Deep Dive into Regions and Zones ( Ed ) - 1 hour
 * HA Setup with Geo Redundancy ( Ed ) - 1 hour
+* Break
+* Video Conference with Chris Morgan from OpenShift BU
+* [Cartridge Development Basics](/2015-emea-enablement-training/Cartridges/) (
+Buddy ) - 1 hour
 * Third Party Cartridges ( Buddy ) - 1 hour with Labs
   *  Cassandra / Redis
   *  Windows .NET
   *  IBM WAS
-* Cartridge Development Basics ( Buddy ) - 1 hour
-  *  Presentation plus labs
 * Continuous Delivery ( Andrea ) - 45 min
   *  CI & CD
   *  Demo
