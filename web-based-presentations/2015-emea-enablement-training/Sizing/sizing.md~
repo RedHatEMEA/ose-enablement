@@ -131,6 +131,4 @@ Changing one user max_gears:
 		- BIND / DNS
 		- MongoDB (Redundancy is achieved via replica sets)
 		- ActiveMQ (Set up in a Network-of-Brokers configuration)
----
-![Customer case study](/content/Sizing/VF-ITA_Deployment-sizing.pdf) <!-- .element: class="noshadow" fullscreen-size="contain"-->
 

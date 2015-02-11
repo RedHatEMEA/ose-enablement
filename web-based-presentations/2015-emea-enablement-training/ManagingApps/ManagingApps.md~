@@ -69,9 +69,9 @@ If you are unsure of the effect a snapshot import could have on local data, use 
 --
 ## Deployment History and Rollbacks#
 
-- #####OpenShift supports deployment history complete with the ability to rollback to a previous version of your application. 
+- ####OpenShift supports deployment history complete with the ability to rollback to a previous version of your application. 
 
-- #####Specifying the number of deployments to keep ( By default, will only track the last deployment)
+- ####Specifying the number of deployments to keep ( By default, will only track the last deployment)
 ```
 $ cd APP_NAME
 $ rhc app-configure --keep-deployments 10
@@ -96,19 +96,19 @@ Success
 --
 ## Migrating an Application to another Gear
 
-* #####Create a snapshot of an existing application
+#####Create a snapshot of an existing application
 
     $ rhc snapshot save App_Name
 
-* #####Verify that the App_Name.tar.gz file has been created in the working directory
+#####Verify that the App_Name.tar.gz file has been created in the working directory
 
     $ rhc app delete App_Name
 
-* #####Create a new application using the same cartridges, but with the correct gear size
+#####Create a new application using the same cartridges, but with the correct gear size
 
     $ rhc app create App_Name Cart_Name -g gear_size
 
-* #####Finally, restore the previously saved application snapshot to the newly created application
+#####Finally, restore the previously saved application snapshot to the newly created application
 
     $ rhc snapshot restore App_Name -f App_Name.tar.gz
 

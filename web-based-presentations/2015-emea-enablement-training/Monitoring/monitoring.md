@@ -3,35 +3,49 @@
 
 ---
 ###Monitoring Best Practices
+#####General System Checks
 
-![Broker](/content/images/Broker.png) <!-- .element: class="noshadow" -->
+* Use standard system administration checks to monitor the basic health of your system:
+        - ensure adequate memory
+        - minimize disk swapping
+        - ensure adequate disk space
+        - monitor file system health 
+* Monitor the services used by OpenShift Enterprise:
+        - MCollective
+        - Mongo
+        - Apache
+        - ActiveMQ
+        - SELinux and cgroups
 
 --
 ###Monitoring Best Practices
-####BROKER
+#####BROKER
 
-* __`oo-admin-chk`__ 
 * __`oo-accept-broker`__
-* App creation/status check
-* Rpm consistency check with other brokers
-* mco ping compared with nodes in districts (__`oo-mco ping`__)
-* Capacity (__`oo-stats`__)
+  - checks that your broker setup is valid and functional (basic test)
+* __`oo-admin-chk`__
+  - checks the consistency throughout all node hosts and gears in an OpenShift Enterprise deployment
+* __`oo-accept-systems`__
+  - verify that the settings on node hosts are valid and can be used by a broker host
+* __`oo-mco ping`__ (check that nodes respond to MCollective)
+* __`oo-stats`__ (check capacity)
 
 ---
 ###Monitoring Best Practices
-####NODES
+#####NODES
 
-* __`oo-accept-node -v`__ (Checks that node setup is valid and functional and its gears are in good condition)
-   * Rpm consistency check with other ex-nodes
-   * Selinux status (enforcing)
-   * Iptables status (make sure rules are loaded)
+* __`oo-accept-node`__
+  - checks that node setup is valid and functional and its gears are in good condition
+  - check Selinux status (enforcing)
+  - check Iptables status (make sure rules are loaded)
+* __`oo-idler-stats`__ (displays basic statistics about gears on a node)
 
 
 __Try to keep ex-nodes as similar as possible and monitor to ensure this__
 
 ---
 ###Monitoring Best Practices
-####MongoDB
+#####MongoDB
 
 * Replica set health
 * DB size
@@ -40,10 +54,9 @@ __Try to keep ex-nodes as similar as possible and monitor to ensure this__
 * Rpm consistency check with other Mongo nodes
 * Mongo process / port
 
-* Mikoomi project: https://code.google.com/p/mikoomi/wiki/03
-  - __`MongoDB Plugin`__ for Zabbix to monitor standalone, replicated as well as clustered MongoDB instances
+* Mikoomi project: https://code.google.com/p/mikoomi/wiki/03 (__`MongoDB Plugin`__ for Zabbix to monitor standalone, replicated as well as clustered MongoDB instances)
 
---
+---
 
 ##Some monitoring tools
 
@@ -52,7 +65,7 @@ __Try to keep ex-nodes as similar as possible and monitor to ensure this__
 * CA Wily Introscope EPAgent (eg: Produban)
 * ....................
 
----
+--
 
 ##Openshift Admin console
 
@@ -61,7 +74,7 @@ __Try to keep ex-nodes as similar as possible and monitor to ensure this__
 
 __The Administration Console is read-only__, so the settings or data cannot be modified.
 
----
+--
 
 ##Accessing the Openshift Admin console
 
@@ -75,36 +88,37 @@ __The Administration Console is read-only__, so the settings or data cannot be m
 
 ##Openshift Admin console
 
-![Admin console](/content/images/AdminConsole1.png) <!-- .element: class="noshadow" -->
+![Admin console](../images/AdminConsole1.png) <!-- .element: class="noshadow" -->
 --
 
 ##Openshift Admin console
 
-![Admin console](/content/images/AdminConsole2.png) <!-- .element: class="noshadow" -->
+![Admin console](../images/AdminConsole2.png) <!-- .element: class="noshadow" -->
 --
 
 ##Openshift Admin console
 
-![Admin console](/content/images/AdminConsole3.png) <!-- .element: class="noshadow" -->
+![Admin console](../images/AdminConsole3.png) <!-- .element: class="noshadow" -->
 --
 
 ##Openshift Admin console
 
-![Admin console](/content/images/AdminConsole4.png) <!-- .element: class="noshadow" -->
+![Admin console](../images/AdminConsole4.png) <!-- .element: class="noshadow" -->
 
----
+--
 ##Zabbix
 
 * OpenShift Online's Zabbix scripts and monitoring bits 
 https://github.com/openshift/openshift_zabbix
+
 * Zabbix Monitoring Cartridges for OpenShift
 https://blog.openshift.com/introducing-zabbix-monitoring-cartridges-for-openshift/
 
----
+--
 
 ###CA Wily Introscope EPAgent @ Produban
 
-![Produban](/content/images/produban.png) <!-- .element: class="noshadow" fullscreen-size="contain"-->
+![Produban](../images/produban.png) <!-- .element: class="noshadow" fullscreen-size="contain"-->
 
 https://github.com/Produban/OpenShift20_Monitoring
 

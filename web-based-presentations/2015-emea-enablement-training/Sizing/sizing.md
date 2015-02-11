@@ -3,7 +3,7 @@
 
 ---
 ###Openshift Enterprise Entities##
-![OSE Entities](/content/images/OSE_entities.png) <!-- .element: class="noshadow" fullscreen-size="contain"-->
+![OSE Entities](../images/OSE_entities.png) <!-- .element: class="noshadow" fullscreen-size="contain"-->
 
 ---
 
@@ -24,7 +24,7 @@
 
 #####To avoid this issue, do some minimal planning up front based on a few variables.
 
-![Sizing gears](/content/images/sizinggears.png) <!-- .element: class="noshadow" fullscreen-size="contain"-->
+![Sizing gears](../images/sizinggears.png) <!-- .element: class="noshadow" fullscreen-size="contain"-->
 ```
 (max_district_gears * (1.0 – target_idle_pct)) / max_active_gears
 ```
@@ -63,7 +63,7 @@ max_district_gears – 6000 right now
 
 * Example: Assuming a node size of 2 Core, 8GB or 4 Core, 32GB, and Gear Sizes of 512MB, 1GB and 
 
-![Gears per node](/content/images/gearspernode.png) <!-- .element: class="noshadow" fullscreen-size="contain"-->
+![Gears per node](../images/gearspernode.png) <!-- .element: class="noshadow" fullscreen-size="contain"-->
 
 --
 
