@@ -34,15 +34,15 @@ $ rhc show-app --gears --app APPNAME
 
 --
 ## Session Replication Demo - Simulate a second user##
-* Open a new web browser to simulate a new user. Follow step 2 and 3. 
-######Now, you have two different users with two different sessions. The '/' would show different values of gear
+* Open a new web browser to simulate a new user. Follow step 2 and 3
+   - Now, you have two different users with two different sessions. The '/' would show different values of gear
 * Log in to gear one. You can find the ssh details for that gear by typing following command
 ```
 $ rhc show-app --gears |grep 53fb46465973ca21b200016b
 ```
 * SSH into the application gear using the SSH URL you got in previous step
 * Stop the gear running the <code>gear stop</code> command
-######This would stop the JBoss EAP container running on that gear. Check the HAProxy status page to view gear status
+   - This would stop the JBoss EAP container running on that gear. Check the HAProxy status page to view gear status
 <img src="https://whyjava.files.wordpress.com/2014/08/screen-shot-2014-08-26-at-1-40-59-am.png" height="100">
 * Now, refresh your first browser, this time request would be served by other gear but you would still see the data from the session.
-######This is because data was replicated to the second gear
+    - This is because data was replicated to the second gear
